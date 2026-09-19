@@ -21,7 +21,7 @@ while i < N and vehiculos_validos < 30:
     hora_entrada = int(input("Hora de entrada (0-23): "))
     horas = float(input("Horas de permanencia: "))
 
-    if hora_entrada < 0 or hora_entrada > 23 or horas <= 0:
+    if hora_entrada < 0 or hora_entrada > 23 or horas <= 0: 
         print("Error: hora de entrada o permanencia invalida.")
         print("Este vehiculo no sera contado.")
     else: 
@@ -71,3 +71,27 @@ while i < N and vehiculos_validos < 30:
     
             print("Vehiculo registrado")
             print("Tarifa: ", tarifa)
+
+    i = i + 1
+
+
+if vehiculos_validos > 0:
+    promedio_horas = total_horas / vehiculos_validos
+else:
+    promedio_horas = 0
+
+ocupacion = (vehiculos_validos / 30) * 100
+
+
+print("Estadisticas finales")
+print("Vehiculos registrados:", vehiculos_validos, "/30")
+print("Ocupacion:", round(ocupacion, 2), "%")
+print("Recaudo total: $", round(total_recaudado, 2))
+print("Estudiantes:", estudiantes,
+      "Docentes:", docentes,
+      "Visitantes:", visitantes)
+print("Promedio de permanencia:", round(promedio_horas, 2), "horas")
+
+
+if vehiculos_validos == 30:
+    print("PARQUEADERO LLENO")
