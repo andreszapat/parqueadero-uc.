@@ -58,3 +58,16 @@ while i < N and vehiculos_validos < 30:
             else:
                 tarifa = 1500 + ((horas - 1) * 1200)
 
+        if hora_entrada >= 19 or hora_entrada < 6:
+            tarifa = tarifa * 0.90
+    
+            # Redondear a 2 decimales
+            tarifa = round(tarifa, 2)
+    
+    
+            vehiculos_validos = vehiculos_validos + 1
+            total_recaudado = total_recaudado + tarifa
+            total_horas = total_horas + horas
+    
+            print("Vehiculo registrado")
+            print("Tarifa: ", tarifa)
