@@ -1,0 +1,7 @@
+PS C:\Users\USC\parqueadero-uc> git log --oneline                                                 
+4403632 (HEAD -> desarrollo, origin/desarrollo, master) add gitignore
+5694e45 Estadisticas finales
+4e96a72 Agregar logica de descuento horario nocturno
+98b63cf Implementa calculo de tarifa segun tipo de usuario
+58adac9 Agregar lectura de datos de vehiculo
+2f81df3 Enhance README with project details
